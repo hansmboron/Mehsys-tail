@@ -9,6 +9,9 @@ module.exports = {
           400: '#991099',
         }
       },
+      fontFamily: {
+        nunito: ['Nunito']
+      }
     },
     variants: {
       extend: {},

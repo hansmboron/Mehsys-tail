@@ -14,7 +14,7 @@
                 switch (cont) {
                     case 0: {
                         $("#slider-1").fadeOut(400);
-                        $("#slider-2").delay(400).fadeIn(400);
+                        $("#slider-2").delay(350).fadeIn(400);
                         $("#sButton1").removeClass("bg-primary-400");
                         $("#sButton2").addClass("bg-primary-400");
                         cont = 1;
@@ -23,7 +23,7 @@
                     }
                     case 1: {
                         $("#slider-2").fadeOut(400);
-                        $("#slider-1").delay(400).fadeIn(400);
+                        $("#slider-1").delay(350).fadeIn(400);
                         $("#sButton2").removeClass("bg-primary-400");
                         $("#sButton1").addClass("bg-primary-400");
 
@@ -31,7 +31,7 @@
                         break;
                     }
                 }
-            }, 7000);
+            }, 4000);
         }
 
         function reinitLoop(time) {
@@ -67,7 +67,7 @@
     </script>
 </head>
 
-<body>
+<body class="font-nunito">
     <div>
         <!-- content wrapper-->
         <nav id="header" class="w-full z-30 top-1 py-1 bg-opacity-50 shadow-lg border-b-2 border-primary-500">
