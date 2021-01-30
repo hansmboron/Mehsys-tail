@@ -1,0 +1,16 @@
+{
+  "name": "mehsys_tail",
+  "version": "1.0.0",
+  "description": "'Site mehsys.site'",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "npx tailwindcss-cli@latest build ./src/styles.css -o ./public/styles.css"
+  },
+  "keywords": [],
+  "author": "Hans M. Boron",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.2.3",
+    "tailwindcss": "^2.0.2"
+  }
+}
