@@ -9,3 +9,7 @@
         @apply text-white bg-primary-400 px-3 py-2 rounded-full font-semibold border border-primary-400 hover:bg-gray-100 hover:text-primary-500 hover:shadow-lg transition ease-out duration-300;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+  }
