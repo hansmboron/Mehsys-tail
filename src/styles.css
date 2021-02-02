@@ -8,6 +8,28 @@
     .btn {
         @apply text-white bg-primary-400 px-3 py-2 rounded-full font-semibold border border-primary-400 hover:bg-gray-100 hover:text-primary-500 hover:shadow-lg transition ease-out duration-300;
     }
+    #btn_top{
+        display:none;
+        position:fixed;
+        width:48px;
+        height:48px;
+        bottom:15px;
+        right:12px;
+        z-index:9999;
+        border:none;
+        outline:none;
+        background-color:purple;
+        color:white;
+        cursor:pointer;
+        padding:10px;
+        border-radius:30px;
+        -webkit-transition: .2s ease-out;
+        -moz-transition: .2s ease-out;
+        transition: .2s ease-out
+    }
+    #btn_top:hover{
+        background-color:#555
+    }
 }
 
 html {

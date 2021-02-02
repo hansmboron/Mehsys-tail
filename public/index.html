@@ -5,107 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Mehsys - Programa para agendamento de horários grátis. Author: Hans M. Boron, Category: Software,">
+        content="Mehsys - Programa simples, grátis e open source para agendamento de horários para salão de beleza, barbearia, etc. Banco de dados local, portanto, não precisa de internet para funcionar. Author: Hans M. Boron, Category: Software">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google-site-verification" content="uLcbSWKhzOp6gn1FnVngWl3ntsCXNohgTZSiIWQRIuY" />
     <meta name="theme-color" content="#850085" />
     <meta http-equiv="Cache-control" content="public">
-    <title>Mehsys - Download</title>
+    <title>Mehsys - Agendamento de Horários</title>
     <link rel="shortcut icon" href="img/flavicon.png" />
     <link rel="stylesheet" href="styles.css">
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script>
-        var cont = 0;
-        function loopSlider() {
-            var xx = setInterval(function () {
-                switch (cont) {
-                    case 0: {
-                        $("#slider-1").fadeOut(400);
-                        $("#slider-2").delay(399).fadeIn(400);
-                        $("#sButton1").removeClass("bg-primary-400");
-                        $("#sButton2").addClass("bg-primary-400");
-                        cont = 1;
-
-                        break;
-                    }
-                    case 1: {
-                        $("#slider-2").fadeOut(400);
-                        $("#slider-1").delay(399).fadeIn(400);
-                        $("#sButton2").removeClass("bg-primary-400");
-                        $("#sButton1").addClass("bg-primary-400");
-
-                        cont = 0;
-                        break;
-                    }
-                }
-            }, 8000);
+    <style>
+        .active {
+            display: block;
         }
+    </style>
 
-        function reinitLoop(time) {
-            clearInterval(xx);
-            setTimeout(loopSlider(), time);
-        }
-
-        function sliderButton1() {
-
-            $("#slider-2").fadeOut(400);
-            $("#slider-1").delay(399).fadeIn(400);
-            $("#sButton2").removeClass("bg-primary-400");
-            $("#sButton1").addClass("bg-primary-400");
-            reinitLoop(8000);
-            cont = 0
-        }
-
-        function sliderButton2() {
-            $("#slider-1").fadeOut(400);
-            $("#slider-2").delay(399).fadeIn(400);
-            $("#sButton1").removeClass("bg-primary-400");
-            $("#sButton2").addClass("bg-primary-400");
-            reinitLoop(8000);
-            cont = 1
-        }
-
-        $(window).ready(function () {
-            $("#slider-2").hide();
-            $("#sButton1").addClass("bg-primary-400");
-
-            loopSlider();
-        });
-    </script>
 </head>
 
 <body class="font-nunito">
     <div>
         <!-- content wrapper-->
         <nav id="header" class="w-full z-30 top-1 bg-opacity-50 shadow-lg border-b-2 border-primary-500 py-1">
-            <div class="w-full flex items-center justify-between mt-0 px-10 py-1">
+            <div class="w-full flex items-top justify-between mt-0 px-10 py-1">
                 <label for="menu-toggle" class="cursor-pointer md:hidden block">
-                    <svg class="fill-current text-purple-600" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        viewBox="0 0 20 20">
+                    <svg id="hamburgerbtn" class="fill-current text-purple-600 my-4" xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20" viewBox="0 0 20 20">
                         <title>menu</title>
                         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                     </svg>
                 </label>
-                <input class="hidden" type="checkbox" id="menu-toggle">
 
-                <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+                <div class="hidden md:flex md:flex-row md:items-center md:w-auto w-full order-3 md:order-1"
+                    id="mobileMenu">
                     <nav>
-                        <ul class="md:flex items-center justify-between text-base text-gray-500">
-                            <li><a class="inline-block no-underline pt-1 px-4 pl-3 pr-8" href="#"><img class="h-12"
+                        <ul class="md:flex md:flex-row items-center justify-between text-base text-gray-500">
+                            <li><a class="inline-block no-underline pt-1 px-4 pl-3 pr-6" href="#"><img class="h-12"
                                         src="img/logo.png" alt=""></a></li>
-                            <li><a class="inline-block no-underline hover:text-primary-500 font-medium text-lg py-2 px-3 delay-200"
+                            <li><a class="inline-block no-underline hover:text-primary-500 font-medium text-base py-2 px-2"
                                     href="#detalhes"><svg class="inline-block w-5 h-5 mb-1" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg> Detalhes</a></li>
-                            <li><a class="inline-block no-underline hover:text-primary-500 font-medium text-lg py-2 px-3"
+                            <li><a class="inline-block no-underline hover:text-primary-500 font-medium text-base py-2 px-2"
                                     href="#down"><svg class="inline-block w-5 h-5 mb-1" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                                     </svg> Downloads</a></li>
-                            <li><a class="inline-block no-underline hover:text-primary-500 font-medium text-lg py-2 px-3"
+                            <li><a class="inline-block no-underline hover:text-primary-500 font-medium text-base py-2 pl-2"
                                     href="#contato"> <svg class="inline-block w-5 h-5 mb-1" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -116,8 +63,8 @@
                     </nav>
                 </div>
 
-                <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
-                    <div class="auth flex items-center w-full md:w-full">
+                <div id="mobileMenu2" class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4">
+                    <div class="auth md:flex items-center w-full hidden">
                         <a href="#desktop"><button class="btn mr-4">
                                 <svg class="inline-block w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -142,43 +89,44 @@
                 <header>
                     <h1 class="text-center text-5xl font-bold text-primary-500 mb-4"><a name="desktop"></a>Mehsys
                         Desktop</h1>
-                    <h3 class="text-center text-lg mb-2"><a name="detalhes">Sistema simples grátis e open source para
-                            agendamento de
-                            horários para salão de beleza, barbearia, etc. Banco de dados local, portanto, não precisa
-                            de
-                            internet para funcionar.</a>
+                    <h3 class="text-center text-2xl mb-2"><a name="detalhes">Sistema <strong>simples</strong>,
+                            <strong>grátis</strong> e <strong>open source</strong> para
+                            agendamento de horários para salão de beleza, barbearia, etc. Banco de dados local,
+                            portanto, não precisa de internet para funcionar. Dois níveis de usuário diferentes,
+                            <em>'admin'</em> (acesso completo) e <em>'user'</em> (acesso bloqueado à partes mais
+                            sensíveis do sistema). Geração de relatórios em pdf.</a>
                     </h3>
                 </header>
                 <!-- carousel -->
-                <div class="h-auto">
+                <div class="h-96 mb-10">
                     <div id="slider-1" class="container mx-auto">
-                        <div class="bg-center h-auto py-52 object-fill" style="background-image: url(img/login.png)">
+                        <div class="bg-center py-52 object-fill" style="background-image: url(img/login.webp)">
                         </div> <!-- container -->
                         <br>
                     </div>
 
                     <div id="slider-2" class="container mx-auto">
-                        <div class="bg-top h-auto py-52 object-fill" style="background-image: url(img/clientes.png)">
+                        <div class="bg-top py-52 object-fill" style="background-image: url(img/clientes.webp)">
                         </div> <!-- container -->
                         <br>
                     </div>
                 </div>
                 <div class="flex justify-between w-12 mx-auto pb-2">
-                    <button id="sButton1" onclick="sliderButton1()"
+                    <button id="sButton1" aria-label="primeira imagem" onclick="sliderButton1()"
                         class="bg-purple-400 rounded-full w-4 pb-2 "></button>
-                    <button id="sButton2" onclick="sliderButton2() "
+                    <button id="sButton2" aria-label="segunda imagem" onclick="sliderButton2() "
                         class="bg-purple-400 rounded-full w-4 p-2"></button>
                 </div>
-            </div> <!-- fim carousel-->
+            </div>
 
             <!-- Video-->
             <div class="flex justify-center px-8 bg-purple-200 mt-3 py-2">
                 <div>
                     <h3 class="text-center text-2xl text-primary-500 font-bold">Tutorial Mehsys Desktop</h3>
-                    <iframe width="440" height="300" src="https://www.youtube.com/embed/QX1FZ-Lq2sk" frameborder="0"
+                    <iframe width="380" height="300" src="https://www.youtube.com/embed/QX1FZ-Lq2sk" frameborder="0"
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                    <h5 class="text-right text-sm text-gray-600">*video antigo, mas serve até que eu faça outro</h5>
+                    <h5 class="text-left text-sm text-gray-600">*video antigo, mas serve até que eu faça outro</h5>
                 </div>
             </div>
 
@@ -253,7 +201,7 @@
         <div class="pb-4">
             <div class="bg-white relative shadow-xl w-11/12 md:w-9/12 lg:w-4/6 xl:w-3/6 mx-auto">
                 <div class="flex justify-center">
-                    <img src="img/hans1x1.png" alt="hans m boron"
+                    <img src="img/hans1x1.webp" alt="hans m boron"
                         class="rounded-full mx-auto absolute -top-20 w-32 h-32 shadow-2xl border-4 border-white">
                 </div>
 
@@ -275,12 +223,34 @@
                             class="bg font-bold text-sm text-red-700 w-full text-center py-3 hover:bg-red-700 hover:text-white hover:shadow-lg cursor-pointer">YouTube</a>
                         <a href="https://t.me/hansboron" target="_blank" rel="noopener noreferrer"
                             class="bg font-bold text-sm text-indigo-700 w-full text-center py-3 hover:bg-indigo-700 hover:text-white hover:shadow-lg cursor-pointer">Telegram</a>
-                        <a href="mailto@mehsysbrasil@gmail.com"
+                        <a href="mailto:mehsysbrasil@gmail.com"
                             class="bg font-bold text-sm text-gray-600 w-full text-center py-3 hover:bg-gray-600 hover:text-white hover:shadow-lg cursor-pointer">Email</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="text-center">
+        <p class="text-base text-gray-800 py-2 px-4">Gostou do conteúdo?<br>Que tal nos ajudar a desenvolver o Mehsys
+            contribuindo
+            com um copo
+            de
+            café!</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"> <input type="hidden"
+                name="cmd" value="_donations" /> <input type="hidden" name="business" value="HA82F4DHMEDEU" /> <input
+                type="hidden" name="item_name" value="Ajude-nos a desenvolver nosso App" /> <input type="hidden"
+                name="currency_code" value="BRL" /> <input type="image"
+                src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit"
+                title="PayPal - O jeito mais seguro e fácil de pagar online!"
+                alt="Faça doações com o botão do PayPal" /> <img alt="" border="0"
+                src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" /></form>
+        <small class=" inline-block">Feito com <svg class="w-4 h-4 inline-block text-red-700" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                </path>
+            </svg> em Irati/PR</small>
     </div>
 
     </main>
@@ -291,6 +261,91 @@
         </div>
     </footer>
 
+    <!-- top-->
+    <div class=""> <button onclick="topFunction()" id="btn_top" title="Ir ao topo"><svg class="w-7 h-7 " fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18">
+                </path>
+            </svg></button></div>
+
+    <script>
+        let hamburger = document.getElementById('hamburgerbtn');
+        let mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function () {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 200) {
+                $('#btn_top').fadeIn(200);
+            } else {
+                $('#btn_top').fadeOut(200);
+            }
+        });
+        $('#btn_top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 300);
+        });
+    </script>
+    <script>
+        var cont = 0;
+        function loopSlider() {
+            var xx = setInterval(function () {
+                switch (cont) {
+                    case 0: {
+                        $("#slider-1").fadeOut(400);
+                        $("#slider-2").delay(400).fadeIn(400);
+                        $("#sButton1").removeClass("bg-primary-400");
+                        $("#sButton2").addClass("bg-primary-400");
+                        cont = 1;
+                        break;
+                    }
+                    case 1: {
+                        $("#slider-2").fadeOut(400);
+                        $("#slider-1").delay(400).fadeIn(400);
+                        $("#sButton2").removeClass("bg-primary-400");
+                        $("#sButton1").addClass("bg-primary-400");
+                        cont = 0;
+                        break;
+                    }
+                }
+            }, 8000);
+        }
+
+        function reinitLoop(time) {
+            clearInterval(xx);
+            setTimeout(loopSlider(), time);
+        }
+
+        function sliderButton1() {
+            $("#slider-2").fadeOut(400);
+            $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton2").removeClass("bg-primary-400");
+            $("#sButton1").addClass("bg-primary-400");
+            reinitLoop(8000);
+            cont = 0
+        }
+
+        function sliderButton2() {
+            $("#slider-1").fadeOut(400);
+            $("#slider-2").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("bg-primary-400");
+            $("#sButton2").addClass("bg-primary-400");
+            reinitLoop(8000);
+            cont = 1
+        }
+
+        $(window).ready(function () {
+            $("#slider-2").hide();
+            $("#sButton1").addClass("bg-primary-400");
+            loopSlider();
+        });
+    </script>
 </body>
 
 </html>
