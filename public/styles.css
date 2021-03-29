@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
+/*! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com */
+
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
@@ -409,15 +411,18 @@ textarea {
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
 input::placeholder,
 textarea::placeholder {
+  opacity: 1;
   color: #9ca3af;
 }
 
@@ -831,6 +836,10 @@ video {
   height: 3rem;
 }
 
+.h-16{
+  height: 4rem;
+}
+
 .h-32{
   height: 8rem;
 }
@@ -938,16 +947,17 @@ video {
   margin-top: 3rem;
 }
 
-.mb-12{
-  margin-bottom: 3rem;
-}
-
 .mt-16{
   margin-top: 4rem;
 }
 
 .mb-20{
   margin-bottom: 5rem;
+}
+
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .object-fill{
@@ -1018,6 +1028,11 @@ video {
   padding-bottom: 13rem;
 }
 
+.py-80{
+  padding-top: 20rem;
+  padding-bottom: 20rem;
+}
+
 .pt-1{
   padding-top: 0.25rem;
 }
@@ -1048,10 +1063,6 @@ video {
 
 .pr-6{
   padding-right: 1.5rem;
-}
-
-.pt-10{
-  padding-top: 2.5rem;
 }
 
 .absolute{
