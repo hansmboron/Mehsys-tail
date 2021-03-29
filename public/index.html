@@ -11,13 +11,27 @@
     <meta name="theme-color" content="#850085" />
     <meta http-equiv="Cache-control" content="public">
     <title>Mehsys - Agendamento de Horários</title>
-    <link rel="shortcut icon" href="img/flavicon.png" />
+    <!-- <link rel="shortcut icon" href="img/flavicon.png" /> -->
+    <!-- <link href="img/favicon.png" rel="icon" type="image/x-icon"> -->
     <link rel="stylesheet" href="styles.css">
-    <style>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="img/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="img/favicon-128-128.png" sizes="128x128" />
+    <!-- <style>
         .active {
             display: block;
         }
-    </style>
+    </style> -->
 
 </head>
 
@@ -85,11 +99,11 @@
         </nav>
 
         <main class="py-5">
-            <div class="container w-11/12 sm:w-10/12 md:w-9/12 lg:w-7/12 xl:5/12 mx-auto">
+            <section class="container w-11/12 sm:w-10/12 md:w-9/12 lg:w-7/12 xl:5/12 mx-auto">
                 <header>
                     <h1 class="text-center text-5xl font-bold text-primary-500 mb-4"><a name="desktop"></a>Mehsys
                         Desktop</h1>
-                    <h3 class="text-center text-2xl mb-2"><a name="detalhes">Sistema <strong>simples</strong>,
+                    <h3 class="text-center text-2xl mb-2"><a>Sistema <strong>simples</strong>,
                             <strong>grátis</strong> e <strong>open source</strong> para
                             agendamento de horários para salão de beleza, barbearia, etc. Banco de dados local,
                             portanto, não precisa de internet para funcionar. Dois níveis de usuário diferentes,
@@ -100,14 +114,22 @@
                 <!-- carousel -->
                 <div class="h-96 mb-10">
                     <div id="slider-1" class="container mx-auto">
-                        <div class="bg-center py-52 object-fill" style="background-image: url(img/login.webp)">
-                        </div> <!-- container -->
+                        <figure>
+                            <a href="img/login.webp">
+                                <div class="bg-center py-52 object-fill" style="background-image: url(img/login.webp)">
+                                </div> <!-- container -->
+                            </a>
+                        </figure>
                         <br>
                     </div>
 
                     <div id="slider-2" class="container mx-auto">
-                        <div class="bg-top py-52 object-fill" style="background-image: url(img/clientes.webp)">
-                        </div> <!-- container -->
+                        <figure>
+                            <a href="img/clientes.webp">
+                                <div class="bg-top py-52 object-fill" style="background-image: url(img/clientes.webp)">
+                                </div> <!-- container -->
+                            </a>
+                        </figure>
                         <br>
                     </div>
                 </div>
@@ -117,10 +139,10 @@
                     <button id="sButton2" aria-label="segunda imagem" onclick="sliderButton2() "
                         class="bg-purple-400 rounded-full w-4 p-2"></button>
                 </div>
-            </div>
+            </section>
 
             <!-- Video-->
-            <div class="flex justify-center px-8 bg-purple-200 mt-3 py-2">
+            <section class="flex justify-center px-8 bg-purple-200 mt-3 py-2 mb-10">
                 <div>
                     <h3 class="text-center text-2xl text-primary-500 font-bold">Tutorial Mehsys Desktop</h3>
                     <iframe width="380" height="300" src="https://www.youtube.com/embed/QX1FZ-Lq2sk" frameborder="0"
@@ -128,17 +150,52 @@
                         allowfullscreen></iframe>
                     <h5 class="text-left text-sm text-gray-600">*video antigo, mas serve até que eu faça outro</h5>
                 </div>
-            </div>
+            </section>
 
             <!-- Mehsys Mobile-->
-            <div class="container w-11/12 sm:w-10/12 md:w-9/12 lg:w-7/12 xl:5/12 mx-auto pt-10">
+            <section class="container w-11/12 sm:w-10/12 md:w-9/12 lg:w-7/12 xl:5/12 mx-auto">
                 <header>
-                    <h1 class="text-center text-5xl font-bold text-primary-500 mb-4"> <a name="mobile">Mehsys Mobile</a>
-                    </h1>
-                    <h3 class="text-center text-lg mb-12">Em desenvolvimento...</h3>
+                    <h1 class="text-center text-5xl font-bold text-primary-500 mb-4"><a name="mobile"></a>Mehsys
+                        Mobile</h1>
+                    <h3 class="text-center text-2xl mb-2"><a name="detalhes">Sistema <strong>simples</strong> e
+                            <strong>grátis</strong> para agendamento de horários para salão de beleza, barbearia, etc.
+                            Banco de dados local,
+                            portanto, não precisa de internet para funcionar, mas atenção: (se desistalar o app o banco
+                            de dados é excluido junto).
+                            Geração de relatórios em pdf, além de ser possível compartilha-los com outros apps.</a>
+                    </h3>
                 </header>
-                <hr>
-            </div>
+                <!-- carousel -->
+                <div class=" mb-10" style="height: 610px;">
+                    <div id="slider-3" class="container mx-auto">
+                        <figure>
+                            <a href="img/slide3.png">
+                                <div class="bg-center py-80 object-contain h-16"
+                                    style="background-image: url(img/slide3.png);  background-repeat: no-repeat; background-size: 418px;">
+                                </div> <!-- container -->
+                            </a>
+                        </figure>
+                        <br>
+                    </div>
+
+                    <div id="slider-4" class="container mx-auto">
+                        <figure>
+                            <a href="img/slide4.png">
+                                <div class="bg-center py-80 object-contain"
+                                    style="background-image: url(img/slide4.png);  background-repeat: no-repeat; background-size: 418px;">
+                                </div> <!-- container -->
+                            </a>
+                        </figure>
+                        <br>
+                    </div>
+                </div>
+                <div class="flex justify-between w-12 mx-auto pb-2">
+                    <button id="sButton3" aria-label="primeira imagem" onclick="sliderButton1()"
+                        class="bg-purple-400 rounded-full w-4 pb-2 "></button>
+                    <button id="sButton4" aria-label="segunda imagem" onclick="sliderButton2() "
+                        class="bg-purple-400 rounded-full w-4 p-2"></button>
+                </div>
+            </section>
 
             <!-- Downloads-->
             <div class="container w-11/12 sm:w-10/12 md:w-9/12 lg:w-7/12 xl:5/12 mx-auto pt-6">
@@ -146,6 +203,27 @@
                     <h1 class="text-center text-2xl font-bold text-primary-500 mb-4"><a
                             class="transform ease-out duration-500" name="down">Downloads</a></h1>
                 </header>
+
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 bg-primary-500 border rounded-xl w-full items-center hover:shadow-xl hover:bg-primary-400  p-3 my-4">
+                    <div class="text-sm w-full col-span-1 text-white text-center">
+                        <h5 class="font-bold text-lg">Mehsys para Android</h5>
+                        <h5>Versão: 1.0.0</h5>
+                        <h5>Tamanho: 10 MB</h5>
+                        <h5>Tipo: APK</h5>
+                        <h5 class="text-green-400">virustotal.com: Scan (0/62)</h5>
+                    </div>
+                    <div class="col-span-1 text-center items-center my-3">
+                        <a href="http://bit.ly/mehsys_android" target="_blank" rel="noopener noreferrer"><button
+                                class="text-white text-lg bg-green-600 px-5 py-2 rounded font-bold hover:bg-green-500 hover:shadow-lg transform hover:scale-125 transition ease-out duration-300">
+                                <svg class="w-7 h-7 inline-block pb-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                </svg> Download
+                            </button></a>
+                    </div>
+                </div>
 
                 <div
                     class="grid grid-cols-1 sm:grid-cols-2 bg-primary-500 border rounded-xl w-full items-center hover:shadow-xl hover:bg-primary-400  p-3 my-4">
@@ -245,6 +323,19 @@
                 title="PayPal - O jeito mais seguro e fácil de pagar online!"
                 alt="Faça doações com o botão do PayPal" /> <img alt="" border="0"
                 src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" /></form>
+
+
+        <figure class="pt-1">
+            <a href="img/pix.png">
+                <img class="mx-auto" style="width: 250px;" src="img/pix.png" alt="QRCode Pix">
+            </a>
+        </figure>
+
+
+        <div class="pb-4">
+            <span class="text-lg">PIX: 66bdcd1a-b887-4a63-a535-f6efd895753b</span>
+        </div>
+
         <small class=" inline-block">Feito com <svg class="w-4 h-4 inline-block text-red-700" fill="none"
                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -344,6 +435,61 @@
             $("#slider-2").hide();
             $("#sButton1").addClass("bg-primary-400");
             loopSlider();
+        });
+
+        // courosel 2
+
+        var cont2 = 0;
+        function loopSlider2() {
+            var xx = setInterval(function () {
+                switch (cont2) {
+                    case 0: {
+                        $("#slider-3").fadeOut(400);
+                        $("#slider-4").delay(400).fadeIn(400);
+                        $("#sButton3").removeClass("bg-primary-400");
+                        $("#sButton4").addClass("bg-primary-400");
+                        cont2 = 1;
+                        break;
+                    }
+                    case 1: {
+                        $("#slider-4").fadeOut(400);
+                        $("#slider-3").delay(400).fadeIn(400);
+                        $("#sButton4").removeClass("bg-primary-400");
+                        $("#sButton3").addClass("bg-primary-400");
+                        cont2 = 0;
+                        break;
+                    }
+                }
+            }, 8000);
+        }
+
+        function reinitLoop2(time) {
+            clearInterval(xx);
+            setTimeout(loopSlider2(), time);
+        }
+
+        function sliderButton1() {
+            $("#slider-4").fadeOut(400);
+            $("#slider-3").delay(400).fadeIn(400);
+            $("#sButton4").removeClass("bg-primary-400");
+            $("#sButton3").addClass("bg-primary-400");
+            reinitLoop2(8000);
+            cont2 = 0
+        }
+
+        function sliderButton2() {
+            $("#slider-3").fadeOut(400);
+            $("#slider-4").delay(400).fadeIn(400);
+            $("#sButton3").removeClass("bg-primary-400");
+            $("#sButton4").addClass("bg-primary-400");
+            reinitLoop2(8000);
+            cont2 = 1
+        }
+
+        $(window).ready(function () {
+            $("#slider-4").hide();
+            $("#sButton3").addClass("bg-primary-400");
+            loopSlider2();
         });
     </script>
 </body>
