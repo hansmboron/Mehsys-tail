@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://mehsys.com.br/sitemap.xml
