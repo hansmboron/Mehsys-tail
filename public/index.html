@@ -414,7 +414,21 @@
         </button>
     </div>
 
+    <script>
+        // animate to top
+        $('#btn_top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 300);
+        });
 
+        // toggle menu
+        let hamburger = document.getElementById('hamburgerbtn');
+        let mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', function () {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
